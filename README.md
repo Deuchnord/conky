@@ -2,6 +2,8 @@
 
 This repository contains my main Conky configuration.
 
+![Screenshot of the Conky configuration with the Weather module enabled](.misc/conky.jpg)
+
 ## How to install this configuration
 
 If you already have an existent configuration, remember to back it up. Then
