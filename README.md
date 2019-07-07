@@ -66,6 +66,12 @@ humidity) and the sunrise and sunset hours. It is based on
 
 ##### Activation
 
+This module requires the [“Weather Icons”](https://erikflowers.github.io/weather-icons/)
+font, which provides very nice... weather icons! If you are on Arch Linux, there
+is [a package](https://aur.archlinux.org/packages/ttf-weather-icons/) on the
+AUR, otherwhise download the archive on the font's website and install the TTF
+file located in the `/font` folder.
+
 First, you will have to [sign up](https://home.openweathermap.org/users/sign_up)
 on OpenWeatherMap. This is necessary step to be able to call their APIs. The
 free plan should be enough.
