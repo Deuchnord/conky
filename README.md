@@ -116,3 +116,18 @@ where you want the module to appear:
 ${execpi 600 python ~/.config/conky/weather.py --config ~/.config/conky/weather.json}
 ```
 
+#### Update notification module
+
+The update notification module checks whether there are available updates available for the system.
+It is currently only available for Arch Linux.
+
+##### Activating the module
+
+Create a copy of the `checkupdates.archlinux.sh` file to `checkupdates.sh`.
+Then add the following command where you want the notification to appear:
+
+```conky
+${texeci 1800 ~/.config/conky/checkupdates.sh}
+```
+
+This will look for available updates every 30 minutes. You can change the frequence of check by changing the `1800` parameter (it's given in seconds).
