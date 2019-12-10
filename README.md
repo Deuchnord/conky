@@ -21,7 +21,7 @@ Then start (or restart) Conky. That's it, your minimal configuration is ready!
 The configuration is split in two parts:
 
 - the main, default one, which needs (almost) no configuration,
-- the facultative one, which needs some configuration.
+- the facultative ones, which need to install software and/or some configuration.
 
 ### Main default configuration
 
@@ -116,3 +116,22 @@ where you want the module to appear:
 ${execpi 600 python ~/.config/conky/weather.py --config ~/.config/conky/weather.json}
 ```
 
+### BOINC module
+
+[BOINC](https://boinc.berkeley.edu/) (Berkeley Open Infrastructure for Network Computing) is an open-source software that allows you to give some computation resources of your computer to Research projects to help them making computation they can't do themselves. In a nutshell, researchers publish their brute data and an algorithm to compute what they need from them, and BOINC dispatches the data between the participants who run the algorithm and send their results back. There are many projects on many thematics (physics, Earth science, medicine…) that need computation resources.
+
+The BOINC module allows you to keep an eye on your active tasks directly from Conky.
+
+#### Activation
+
+First, you will need BOINC installed and configured. If you don't know how to do, have a look the the official documentation of your Linux distribution: [Ubuntu](https://wiki.ubuntu.com/BOINC), [Debian](https://wiki.debian.org/BOINC) and [Arch Linux](https://wiki.archlinux.org/index.php/BOINC) have great documentations about this software, for instance.
+
+You will also need Python 3.
+
+To activate the BOINC module, edit your `conky.conf` file and add this line where you want it to appear:
+
+```conky
+${execi 1 python ~/.config/conky/boinc.py}
+```
+
+Note: for a better look, you may want to use a monospace font on this module.
